@@ -22,28 +22,28 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
                 <Phone className="h-4 w-4 text-primary mt-0.5" />
-                <div>
-                  <p>+7 (900) 123-45-67</p>
-                  <p>+7 (900) 765-43-21</p>
-                </div>
+                <a href="tel:+79515852222" className="hover:text-primary transition-colors">
+                  8-951-585-22-22
+                </a>
               </div>
               <div className="flex items-start gap-2">
                 <Mail className="h-4 w-4 text-primary mt-0.5" />
-                <p>info@techosmotr.ru</p>
+                <a href="mailto:adekt42avto@mail.ru" className="hover:text-primary transition-colors">
+                  adekt42avto@mail.ru
+                </a>
               </div>
             </div>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Адреса</h3>
+            <h3 className="font-semibold mb-4">Адрес</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-primary mt-0.5" />
-                <p>г. Москва, ул. Примерная, д. 123</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-primary mt-0.5" />
-                <p>г. Москва, ул. Тестовая, д. 456</p>
+                <div>
+                  <p>г. Кемерово, Космическая, 16а</p>
+                  <p className="text-muted-foreground text-xs">Южный м-н, Заводский район</p>
+                </div>
               </div>
             </div>
           </div>
@@ -51,9 +51,9 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Режим работы</h3>
             <div className="text-sm space-y-2">
-              <p>Понедельник - Воскресенье</p>
-              <p className="text-accent font-semibold">08:00 - 20:00</p>
-              <p className="text-muted-foreground">Без выходных</p>
+              <p>Пн-Пт: <span className="text-accent font-semibold">09:00 - 19:00</span></p>
+              <p>Сб: <span className="text-accent font-semibold">09:00 - 18:00</span></p>
+              <p className="text-muted-foreground">Вс: Выходной день</p>
             </div>
           </div>
         </div>
@@ -61,10 +61,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
             <p>© 2024 Станция ТО. Все права защищены.</p>
-            <div className="flex gap-6">
-              <p>ОГРН: 1234567890123</p>
-              <p>ИНН: 1234567890</p>
-            </div>
+            <p>г. Кемерово, Космическая, 16а</p>
           </div>
         </div>
       </div>

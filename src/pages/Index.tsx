@@ -5,6 +5,7 @@ import AboutCompany from "@/components/AboutCompany";
 import Pricing from "@/components/Pricing";
 import ContactForm from "@/components/ContactForm";
 import Documents from "@/components/Documents";
+import YandexMap from "@/components/YandexMap";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -16,8 +17,9 @@ const Index = () => {
         <InspectionSteps />
         <AboutCompany />
         <Pricing />
-        <ContactForm />
         <Documents />
+        <ContactForm />
+        <YandexMap />
       </main>
       <Footer />
     </div>

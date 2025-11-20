@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Building2, Award, Users, MapPin } from "lucide-react";
+import { Building2, Award, MapPin } from "lucide-react";
 import teamPhoto from "@/assets/team-photo.jpg";
+import AnimatedCounter from "./AnimatedCounter";
 
 const AboutCompany = () => {
   return (
@@ -23,9 +24,9 @@ const AboutCompany = () => {
                 <div>
                   <h3 className="font-semibold mb-2">Официальная аккредитация</h3>
                   <p className="text-sm text-muted-foreground">
-                    ОГРН: 1234567890123<br />
-                    ИНН: 1234567890<br />
-                    Аттестат аккредитации №АА-12345
+                    Аккредитованная станция технического осмотра<br />
+                    Все необходимые лицензии и сертификаты<br />
+                    Соответствие требованиям законодательства РФ
                   </p>
                 </div>
               </CardContent>
@@ -53,10 +54,10 @@ const AboutCompany = () => {
                   <MapPin className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">Наши адреса</h3>
+                  <h3 className="font-semibold mb-2">Наш адрес</h3>
                   <p className="text-sm text-muted-foreground">
-                    г. Москва, ул. Примерная, д. 123<br />
-                    г. Москва, ул. Тестовая, д. 456
+                    г. Кемерово, Космическая, 16а<br />
+                    Южный м-н, Заводский район
                   </p>
                 </div>
               </CardContent>
@@ -79,27 +80,35 @@ const AboutCompany = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in">
-          <Card className="text-center border-border/50">
+          <Card className="text-center border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:scale-105 group cursor-pointer">
             <CardContent className="p-6">
-              <div className="text-4xl font-bold text-primary mb-2">15+</div>
+              <div className="text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">
+                <AnimatedCounter end={15} suffix="+" />
+              </div>
               <div className="text-sm text-muted-foreground">Лет на рынке</div>
             </CardContent>
           </Card>
-          <Card className="text-center border-border/50">
+          <Card className="text-center border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:scale-105 group cursor-pointer">
             <CardContent className="p-6">
-              <div className="text-4xl font-bold text-accent mb-2">50K+</div>
+              <div className="text-4xl font-bold text-accent mb-2 group-hover:scale-110 transition-transform">
+                <AnimatedCounter end={50} suffix="K+" />
+              </div>
               <div className="text-sm text-muted-foreground">Довольных клиентов</div>
             </CardContent>
           </Card>
-          <Card className="text-center border-border/50">
+          <Card className="text-center border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:scale-105 group cursor-pointer">
             <CardContent className="p-6">
-              <div className="text-4xl font-bold text-primary mb-2">10</div>
+              <div className="text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">
+                <AnimatedCounter end={10} />
+              </div>
               <div className="text-sm text-muted-foreground">Опытных специалистов</div>
             </CardContent>
           </Card>
-          <Card className="text-center border-border/50">
+          <Card className="text-center border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:scale-105 group cursor-pointer">
             <CardContent className="p-6">
-              <div className="text-4xl font-bold text-accent mb-2">4.9</div>
+              <div className="text-4xl font-bold text-accent mb-2 group-hover:scale-110 transition-transform">
+                4.9
+              </div>
               <div className="text-sm text-muted-foreground">Рейтинг клиентов</div>
             </CardContent>
           </Card>
