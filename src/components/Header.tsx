@@ -1,4 +1,3 @@
-import { Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {

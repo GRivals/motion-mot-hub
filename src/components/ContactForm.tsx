@@ -20,7 +20,7 @@ const ContactForm = () => {
     
     // Форматирование сообщения для WhatsApp
     const message = `Новая заявка на ТО:\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nEmail: ${formData.email}\nКомментарий: ${formData.comment}`;
-    const whatsappUrl = `https://wa.me/79001234567?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/79515852222?text=${encodeURIComponent(message)}`;
     
     // Открываем WhatsApp
     window.open(whatsappUrl, "_blank");
@@ -96,53 +96,57 @@ const ContactForm = () => {
           </div>
 
           <div className="space-y-6 animate-slide-in-right">
-            <Card className="border-border/50">
+            <Card className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group">
               <CardContent className="p-6 flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
                   <Phone className="h-6 w-6" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Телефон</h3>
-                  <p className="text-muted-foreground">+7 (900) 123-45-67</p>
-                  <p className="text-muted-foreground">+7 (900) 765-43-21</p>
+                  <a href="tel:+79515852222" className="text-muted-foreground hover:text-primary transition-colors block">
+                    8-951-585-22-22
+                  </a>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border/50">
+            <Card className="border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg group">
               <CardContent className="p-6 flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300 group-hover:scale-110">
                   <Mail className="h-6 w-6" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Email</h3>
-                  <p className="text-muted-foreground">info@techosmotr.ru</p>
+                  <a href="mailto:adekt42avto@mail.ru" className="text-muted-foreground hover:text-accent transition-colors">
+                    adekt42avto@mail.ru
+                  </a>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border/50">
+            <Card className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group">
               <CardContent className="p-6 flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
                   <Clock className="h-6 w-6" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Режим работы</h3>
-                  <p className="text-muted-foreground">Понедельник - Воскресенье</p>
-                  <p className="text-muted-foreground">08:00 - 20:00</p>
+                  <p className="text-muted-foreground">Пн-Пт: 09:00 - 19:00</p>
+                  <p className="text-muted-foreground">Сб: 09:00 - 18:00</p>
+                  <p className="text-muted-foreground">Вс: Выходной день</p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border/50">
+            <Card className="border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg group">
               <CardContent className="p-6 flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300 group-hover:scale-110">
                   <MapPin className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">Адреса станций</h3>
-                  <p className="text-muted-foreground">г. Москва, ул. Примерная, д. 123</p>
-                  <p className="text-muted-foreground">г. Москва, ул. Тестовая, д. 456</p>
+                  <h3 className="font-semibold mb-2">Адрес станции</h3>
+                  <p className="text-muted-foreground">г. Кемерово, Космическая, 16а</p>
+                  <p className="text-muted-foreground text-sm">Южный м-н, Заводский район</p>
                 </div>
               </CardContent>
             </Card>

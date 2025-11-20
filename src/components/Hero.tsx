@@ -1,8 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-station.jpg";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollToContacts = () => {
     const element = document.getElementById("contacts");
     element?.scrollIntoView({ behavior: "smooth" });
@@ -10,12 +19,13 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with Parallax */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Станция технического осмотра"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-100"
+          style={{ transform: `translateY(${scrollY * 0.5}px) scale(1.1)` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
       </div>

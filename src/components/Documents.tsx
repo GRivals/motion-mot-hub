@@ -55,7 +55,7 @@ const Documents = () => {
           {documents.map((doc, index) => (
             <Card
               key={index}
-              className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group animate-scale-in"
+              className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:scale-105 group cursor-pointer animate-scale-in"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <CardContent className="p-6">
