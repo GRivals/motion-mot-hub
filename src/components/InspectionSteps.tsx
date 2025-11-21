@@ -1,26 +1,30 @@
-import { ClipboardCheck, Wrench, FileCheck, CheckCircle2 } from "lucide-react";
+import { Phone, Car, CreditCard, FileText, CheckCircle2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const steps = [
   {
-    icon: ClipboardCheck,
-    title: "Запись и регистрация",
-    description: "Запишитесь онлайн или по телефону. При посещении предоставьте документы на автомобиль.",
+    icon: Phone,
+    title: "Свяжитесь с нами для записи",
+    description: "Позвоните по номеру: 8-951-585-22-22 для записи на первичный осмотр. Мы подберем удобное для вас время.",
+    highlight: "8-951-585-22-22",
   },
   {
-    icon: Wrench,
-    title: "Диагностика автомобиля",
-    description: "Наши специалисты проведут полный осмотр по 65 пунктам на современном оборудовании.",
+    icon: Car,
+    title: "Приведите автомобиль",
+    description: "Приведите автомобиль к назначенному времени. Предоставьте документ, удостоверяющий личность, свидетельство о регистрации ТС или его паспорт.",
+    documents: ["Документ, удостоверяющий личность", "Свидетельство о регистрации ТС или паспорт ТС"],
   },
   {
-    icon: FileCheck,
-    title: "Оформление документов",
-    description: "Подготовка диагностической карты и внесение данных в единую автоматизированную систему.",
+    icon: CreditCard,
+    title: "Оплата госпошлины",
+    description: "Оплатите государственную пошлину за внесение сведений в ЕАИСТО (500 ₽). Можем помочь с оформлением на месте.",
+    highlight: "500 ₽",
   },
   {
     icon: CheckCircle2,
-    title: "Получение результата",
-    description: "Получите диагностическую карту на руки или в электронном виде. Готово для ОСАГО!",
+    title: "Получение диагностической карты",
+    description: "После прохождения технического осмотра по 65 пунктам, получите диагностическую карту на руки или в электронном виде. Готово для ОСАГО!",
   },
 ];
 
@@ -30,10 +34,10 @@ const InspectionSteps = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Как проходит техосмотр
+            Пройдите техосмотр с комфортом
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Простой и понятный процесс из 4 шагов
+            Всего четыре простых шага для получения диагностической карты
           </p>
         </div>
 
@@ -56,13 +60,39 @@ const InspectionSteps = () => {
                     </div>
                   </div>
                   <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                     {step.description}
                   </p>
+                  
+                  {step.highlight && (
+                    <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-md font-semibold text-sm">
+                      {step.highlight}
+                    </div>
+                  )}
+                  
+                  {step.documents && (
+                    <div className="mt-3 space-y-1">
+                      {step.documents.map((doc, idx) => (
+                        <div key={idx} className="flex items-start gap-2 text-xs text-muted-foreground">
+                          <FileText className="h-3 w-3 mt-0.5 shrink-0" />
+                          <span>{doc}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             );
           })}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <Button size="lg" asChild>
+            <a href="tel:+79515852222">
+              <Phone className="mr-2 h-5 w-5" />
+              Записаться на техосмотр
+            </a>
+          </Button>
         </div>
       </div>
     </section>
