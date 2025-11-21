@@ -1,17 +1,121 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Building2, Award, MapPin } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Building2, Award, MapPin, FileText, Phone, Mail, Building } from "lucide-react";
 import teamPhoto from "@/assets/team-photo.jpg";
 import AnimatedCounter from "./AnimatedCounter";
+import { Button } from "@/components/ui/button";
 
 const AboutCompany = () => {
   return (
     <section id="about" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">О нашей компании</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">О компании</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Профессиональная станция техосмотра с многолетним опытом
           </p>
+        </div>
+
+        {/* Company Legal Information */}
+        <div className="mb-16">
+          <Card className="mb-8 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5 animate-fade-in overflow-hidden">
+            <CardHeader className="bg-gradient-to-r from-primary/10 to-accent/10">
+              <CardTitle className="flex items-center gap-3 text-xl md:text-2xl">
+                <Building2 className="h-6 w-6 text-primary" />
+                Общество с ограниченной ответственностью "АДЕКТ АВТО"
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="pt-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-card hover:shadow-md transition-all duration-300 border border-border/50 hover:border-primary/50">
+                  <FileText className="h-5 w-5 text-primary shrink-0 mt-1" />
+                  <div>
+                    <div className="text-xs text-muted-foreground mb-1">Номер ОТО</div>
+                    <div className="font-bold text-lg text-primary">14823</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-card hover:shadow-md transition-all duration-300 border border-border/50 hover:border-accent/50">
+                  <Award className="h-5 w-5 text-accent shrink-0 mt-1" />
+                  <div className="w-full">
+                    <div className="text-xs text-muted-foreground mb-2">Аттестат аккредитации</div>
+                    <Button variant="link" className="h-auto p-0 text-accent font-semibold text-sm">
+                      Посмотреть →
+                    </Button>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-card hover:shadow-md transition-all duration-300 border border-border/50 hover:border-primary/50">
+                  <FileText className="h-5 w-5 text-primary shrink-0 mt-1" />
+                  <div>
+                    <div className="text-xs text-muted-foreground mb-1">ИНН</div>
+                    <div className="font-semibold">4205414144</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-card hover:shadow-md transition-all duration-300 border border-border/50 hover:border-primary/50">
+                  <FileText className="h-5 w-5 text-primary shrink-0 mt-1" />
+                  <div>
+                    <div className="text-xs text-muted-foreground mb-1">КПП</div>
+                    <div className="font-semibold">420501001</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-card hover:shadow-md transition-all duration-300 border border-border/50 hover:border-primary/50">
+                  <FileText className="h-5 w-5 text-primary shrink-0 mt-1" />
+                  <div>
+                    <div className="text-xs text-muted-foreground mb-1">ОГРН</div>
+                    <div className="font-semibold">1234200006149</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-card hover:shadow-md transition-all duration-300 border border-border/50 hover:border-primary/50 md:col-span-2 lg:col-span-3">
+                  <Building className="h-5 w-5 text-primary shrink-0 mt-1" />
+                  <div>
+                    <div className="text-xs text-muted-foreground mb-1">Юридический адрес</div>
+                    <div className="font-medium text-sm">650511, Россия, Кемеровская область - Кузбасс, Кемеровский М.О., Березово с., Весенняя ул., д. 50</div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <Card className="border-accent/30 hover:border-accent/60 transition-all duration-300 hover:shadow-lg animate-slide-in-left group">
+              <CardHeader className="pb-4">
+                <CardTitle className="flex items-center gap-3 text-lg group-hover:text-accent transition-colors">
+                  <MapPin className="h-5 w-5 text-accent" />
+                  Фактический адрес
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <p className="text-lg font-bold">Кемерово, Космическая, 16а</p>
+                <p className="text-muted-foreground">Южный м-н, Заводский район</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-lg animate-slide-in-right group">
+              <CardHeader className="pb-4">
+                <CardTitle className="flex items-center gap-3 text-lg group-hover:text-primary transition-colors">
+                  <Phone className="h-5 w-5 text-primary" />
+                  Контактная информация
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 text-muted-foreground" />
+                  <a href="tel:89515852222" className="font-semibold hover:text-primary transition-colors text-lg">
+                    8-951-585-22-22
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="h-4 w-4 text-muted-foreground" />
+                  <a href="mailto:adekt42avto@mail.ru" className="font-semibold hover:text-primary transition-colors">
+                    adekt42avto@mail.ru
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
