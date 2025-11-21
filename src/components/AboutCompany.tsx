@@ -110,7 +110,7 @@ const AboutCompany = () => {
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 text-muted-foreground" />
                   <a href="mailto:adekt42avto@mail.ru" className="font-semibold hover:text-primary transition-colors">
-                    adekt42avto@mail.ru
+                    adekt42avtotex@mail.ru
                   </a>
                 </div>
               </CardContent>

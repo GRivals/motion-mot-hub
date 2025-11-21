@@ -29,7 +29,7 @@ const Footer = () => {
               <div className="flex items-start gap-2">
                 <Mail className="h-4 w-4 text-primary mt-0.5" />
                 <a href="mailto:adekt42avto@mail.ru" className="hover:text-primary transition-colors">
-                  adekt42avto@mail.ru
+                  adekt42avtotex@mail.ru
                 </a>
               </div>
             </div>

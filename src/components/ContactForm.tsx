@@ -118,7 +118,7 @@ const ContactForm = () => {
                 <div>
                   <h3 className="font-semibold mb-2">Email</h3>
                   <a href="mailto:adekt42avto@mail.ru" className="text-muted-foreground hover:text-accent transition-colors">
-                    adekt42avto@mail.ru
+                    adekt42avtotex@mail.ru
                   </a>
                 </div>
               </CardContent>
