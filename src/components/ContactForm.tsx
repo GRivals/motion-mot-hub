@@ -20,8 +20,7 @@ const ContactForm = () => {
     
     // Форматирование сообщения для WhatsApp
     const message = `Новая заявка на ТО:\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nEmail: ${formData.email}\nКомментарий: ${formData.comment}`;
-    const whatsappUrl = `https://wa.me/79000514575?text=${encodeURIComponent(message)}`;
-    //https://wa.me/79000514575
+    const whatsappUrl = `https://wa.me/79515852222?text=${encodeURIComponent(message)}`;
     //https://wa.me/79515852222
     // Открываем WhatsApp
     window.open(whatsappUrl, "_blank");
