@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Header = () => {
   const scrollToSection = (id: string) => {
@@ -44,14 +45,17 @@ const Header = () => {
             </button>
           </nav>
 
-          <Button
-            onClick={() => scrollToSection("contacts")}
-            variant="hero"
-            size="default"
-            className="hidden md:inline-flex"
-          >
-            Записаться на ТО
-          </Button>
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <Button
+              onClick={() => scrollToSection("contacts")}
+              variant="hero"
+              size="default"
+              className="hidden md:inline-flex"
+            >
+              Записаться на ТО
+            </Button>
+          </div>
         </div>
       </div>
     </header>
