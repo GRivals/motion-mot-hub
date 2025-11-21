@@ -10,7 +10,7 @@ const Footer = () => {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-xl">
                 ТО
               </div>
-              <span className="text-lg font-semibold">Станция ТО</span>
+              <span className="text-lg font-semibold">АДЕКТ АВТО</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Профессиональный техосмотр автомобилей с 2008 года
@@ -60,7 +60,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>© 2024 Станция ТО. Все права защищены.</p>
+            <p>© 2022 - 2025 АДЕКТ АВТО. Все права защищены.</p>
             <p>г. Кемерово, Космическая, 16а</p>
           </div>
         </div>

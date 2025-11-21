@@ -31,7 +31,7 @@ const YandexMap = () => {
           const placemark = new window.ymaps.Placemark(
             [55.329826, 86.089531],
             {
-              balloonContentHeader: "Станция ТО",
+              balloonContentHeader: "АДЕКТ АВТО",
               balloonContentBody: "<strong>Адрес:</strong> г. Кемерово, Космическая, 16а<br><strong>Телефон:</strong> 8-951-585-22-22<br><strong>Режим работы:</strong><br>Пн-Пт: 09:00 - 19:00<br>Сб: 09:00 - 18:00<br>Вс: Выходной день",
               balloonContentFooter: "Заводский район, Южный м-н",
               hintContent: "Станция технического осмотра",

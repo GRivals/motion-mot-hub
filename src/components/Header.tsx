@@ -15,7 +15,7 @@ const Header = () => {
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-xl">
               ТО
             </div>
-            <span className="text-lg font-semibold">Станция ТО</span>
+            <span className="text-lg font-semibold">АДЕКТ АВТО</span>
           </div>
 
           <nav className="hidden md:flex items-center gap-6">
