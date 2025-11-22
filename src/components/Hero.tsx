@@ -65,31 +65,30 @@
                   </Button>
                 </div>
 
-                {/* Quick Info */}
-                <div
-                  className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 animate-fade-in"
-                  style={{ animationDelay: "0.6s" }}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <span className="text-2xl font-bold">30</span>
+                  {/* Quick Info */}
+                    <div
+                      className="mt-12 flex items-center gap-4 animate-fade-in"
+                      style={{ animationDelay: "0.6s" }}
+                    >
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <span className="text-3xl font-bold">4.9</span>
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground">Средняя оценка</div>
+                        <div className="font-semibold flex items-center gap-1">
+                          Клиентов
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5 text-yellow-500"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">Всего</div>
-                      <div className="font-semibold">Минут</div>
-                    </div>
-                  </div>
 
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent">
-                      <span className="text-2xl font-bold">15+</span>
-                    </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">Лет</div>
-                      <div className="font-semibold">Опыта</div>
-                    </div>
-                  </div>
-                </div>
 
               </div>
             </div>
