@@ -79,14 +79,6 @@ const Hero = () => {
                 <div className="font-semibold">Опыта</div>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <span className="text-2xl font-bold">6/7</span>
-              </div>
-              <div>
-                <div className="text-sm text-muted-foreground">Работаем</div>
-                <div className="font-semibold">Без выходных</div>
-              </div>
             </div>
           </div>
         </div>
