@@ -60,7 +60,10 @@ const Hero = () => {
           </div>
 
           {/* Quick Info */}
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+          <div
+            className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 animate-fade-in"
+            style={{ animationDelay: "0.6s" }}
+          >
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                 <span className="text-2xl font-bold">30</span>
@@ -79,10 +82,7 @@ const Hero = () => {
                 <div className="font-semibold">Опыта</div>
               </div>
             </div>
-            </div>
           </div>
-        </div>
-      </div>
     </section>
   );
 };
