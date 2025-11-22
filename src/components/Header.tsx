@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const scrollToSection = (id: string) => {
@@ -12,10 +13,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-xl">
-              ТО
-            </div>
-            <span className="text-lg font-semibold">АДЕКТ АВТО</span>
+            <img src={logo} alt="АДЕКТ АВТО" className="h-10 w-auto" />
           </div>
 
           <nav className="hidden md:flex items-center gap-6">

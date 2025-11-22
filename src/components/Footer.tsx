@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -7,10 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-xl">
-                ТО
-              </div>
-              <span className="text-lg font-semibold">АДЕКТ АВТО</span>
+              <img src={logo} alt="АДЕКТ АВТО" className="h-10 w-auto" />
             </div>
             <p className="text-sm text-muted-foreground">
               Профессиональный техосмотр автомобилей с 2008 года
@@ -22,13 +20,13 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
                 <Phone className="h-4 w-4 text-primary mt-0.5" />
-                <a href="tel:+79515852222" className="hover:text-primary transition-colors">
-                  8-951-585-22-22
+                <a href="tel:+79505992222" className="hover:text-primary transition-colors">
+                  8-950-599-2222
                 </a>
               </div>
               <div className="flex items-start gap-2">
                 <Mail className="h-4 w-4 text-primary mt-0.5" />
-                <a href="mailto:adekt42avto@mail.ru" className="hover:text-primary transition-colors">
+                <a href="mailto:adekt42avtotex@mail.ru" className="hover:text-primary transition-colors">
                   adekt42avtotex@mail.ru
                 </a>
               </div>
@@ -41,7 +39,7 @@ const Footer = () => {
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-primary mt-0.5" />
                 <div>
-                  <p>г. Кемерово, Космическая, 16а</p>
+                  <p>г. Кемерово, Космическая улица, 16а к1</p>
                   <p className="text-muted-foreground text-xs">Южный м-н, Заводский район</p>
                 </div>
               </div>
@@ -61,7 +59,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
             <p>© 2022 - 2025 АДЕКТ АВТО. Все права защищены.</p>
-            <p>г. Кемерово, Космическая, 16а</p>
+            <p>г. Кемерово, Космическая улица, 16а к1</p>
           </div>
         </div>
       </div>
