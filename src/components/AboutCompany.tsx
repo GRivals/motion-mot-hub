@@ -1,6 +1,5 @@
 import CompanyLegalInfo from "./about/CompanyLegalInfo";
 import CompanyContactCards from "./about/CompanyContactCards";
-import CompanyFeatures from "./about/CompanyFeatures";
 import CompanyStats from "./about/CompanyStats";
 
 const AboutCompany = () => {
@@ -19,7 +18,6 @@ const AboutCompany = () => {
           <CompanyContactCards />
         </div>
 
-        <CompanyFeatures />
         <CompanyStats />
       </div>
     </section>
