@@ -20,8 +20,7 @@ const ContactForm = () => {
     
     // Форматирование сообщения для WhatsApp
     const message = `Новая заявка на ТО:\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nEmail: ${formData.email}\nКомментарий: ${formData.comment}`;
-    const whatsappUrl = `https://wa.me/79515852222?text=${encodeURIComponent(message)}`;
-    //https://wa.me/79515852222
+    const whatsappUrl = `https://wa.me/79505992222?text=${encodeURIComponent(message)}`;
     // Открываем WhatsApp
     window.open(whatsappUrl, "_blank");
     
@@ -103,8 +102,8 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Телефон</h3>
-                  <a href="tel:+79515852222" className="text-muted-foreground hover:text-primary transition-colors block">
-                    8-951-585-22-22
+                  <a href="tel:+79505992222" className="text-muted-foreground hover:text-primary transition-colors block">
+                    8-950-599-2222
                   </a>
                 </div>
               </CardContent>
@@ -117,7 +116,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Email</h3>
-                  <a href="mailto:adekt42avto@mail.ru" className="text-muted-foreground hover:text-accent transition-colors">
+                  <a href="mailto:adekt42avtotex@mail.ru" className="text-muted-foreground hover:text-accent transition-colors">
                     adekt42avtotex@mail.ru
                   </a>
                 </div>
@@ -145,7 +144,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Адрес станции</h3>
-                  <p className="text-muted-foreground">г. Кемерово, Космическая, 16а</p>
+                  <p className="text-muted-foreground">г. Кемерово, Космическая улица, 16а к1</p>
                   <p className="text-muted-foreground text-sm">Южный м-н, Заводский район</p>
                 </div>
               </CardContent>

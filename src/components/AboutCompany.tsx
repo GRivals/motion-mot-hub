@@ -88,7 +88,7 @@ const AboutCompany = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <p className="text-lg font-bold">Кемерово, Космическая, 16а</p>
+                <p className="text-lg font-bold">Кемерово, Космическая улица, 16а к1</p>
                 <p className="text-muted-foreground">Южный м-н, Заводский район</p>
               </CardContent>
             </Card>
@@ -103,13 +103,13 @@ const AboutCompany = () => {
               <CardContent className="space-y-3">
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4 text-muted-foreground" />
-                  <a href="tel:89515852222" className="font-semibold hover:text-primary transition-colors text-lg">
-                    8-951-585-22-22
+                  <a href="tel:89505992222" className="font-semibold hover:text-primary transition-colors text-lg">
+                    8-950-599-2222
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 text-muted-foreground" />
-                  <a href="mailto:adekt42avto@mail.ru" className="font-semibold hover:text-primary transition-colors">
+                  <a href="mailto:adekt42avtotex@mail.ru" className="font-semibold hover:text-primary transition-colors">
                     adekt42avtotex@mail.ru
                   </a>
                 </div>
@@ -144,8 +144,8 @@ const AboutCompany = () => {
                 <div>
                   <h3 className="font-semibold mb-2">Наши достижения</h3>
                   <p className="text-sm text-muted-foreground">
-                    15+ лет успешной работы<br />
-                    50,000+ проведенных осмотров<br />
+                    Более 15+ лет успешной работы<br />
+                    17,700+ проведенных осмотров<br />
                     Рейтинг 4.9/5.0 по отзывам клиентов
                   </p>
                 </div>
@@ -160,7 +160,7 @@ const AboutCompany = () => {
                 <div>
                   <h3 className="font-semibold mb-2">Наш адрес</h3>
                   <p className="text-sm text-muted-foreground">
-                    г. Кемерово, Космическая, 16а<br />
+                    г. Кемерово, Космическая улица, 16а к1<br />
                     Южный м-н, Заводский район
                   </p>
                 </div>
@@ -195,7 +195,7 @@ const AboutCompany = () => {
           <Card className="text-center border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:scale-105 group cursor-pointer">
             <CardContent className="p-6">
               <div className="text-4xl font-bold text-accent mb-2 group-hover:scale-110 transition-transform">
-                <AnimatedCounter end={50} suffix="K+" />
+                <AnimatedCounter end={17.7} suffix="K+" />
               </div>
               <div className="text-sm text-muted-foreground">Довольных клиентов</div>
             </CardContent>
@@ -203,9 +203,9 @@ const AboutCompany = () => {
           <Card className="text-center border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:scale-105 group cursor-pointer">
             <CardContent className="p-6">
               <div className="text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">
-                <AnimatedCounter end={10} />
+                <AnimatedCounter end={20} suffix="+" />
               </div>
-              <div className="text-sm text-muted-foreground">Опытных специалистов</div>
+              <div className="text-sm text-muted-foreground">Специалистов в штате</div>
             </CardContent>
           </Card>
           <Card className="text-center border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:scale-105 group cursor-pointer">
