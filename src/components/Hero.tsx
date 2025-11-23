@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-station.jpg";
+import logo from "@/assets/logo.png";
 import { useState, useEffect } from "react";
 
 const Hero = () => {
@@ -32,8 +33,12 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-2xl">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+        <div className="max-w-3xl">
+          <div className="mb-8 animate-fade-in">
+            <img src={logo} alt="АДЕКТ АВТО" className="h-32 md:h-40 w-auto mb-8" />
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Техосмотр <span className="text-primary">быстро</span> и{" "}
             <span className="text-accent">надежно</span>
           </h1>
