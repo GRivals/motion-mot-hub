@@ -19,12 +19,22 @@ const CompanyContactCards = () => {
     <div className="grid md:grid-cols-2 gap-6 mb-8">
       {/* Phone Card */}
       <div 
-        className="relative h-[200px] cursor-pointer perspective-1000"
+        className="relative h-[200px] cursor-pointer"
+        style={{ perspective: '1000px' }}
         onClick={() => toggleFlip('phone')}
       >
-        <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flipped.phone ? 'rotate-y-180' : ''}`}>
+        <div 
+          className="relative w-full h-full transition-transform duration-500"
+          style={{ 
+            transformStyle: 'preserve-3d',
+            transform: flipped.phone ? 'rotateY(180deg)' : 'rotateY(0deg)'
+          }}
+        >
           {/* Front */}
-          <Card className="absolute inset-0 backface-hidden border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-lg">
+          <Card 
+            className="absolute inset-0 border-primary/30 hover:border-primary/60 transition-colors"
+            style={{ backfaceVisibility: 'hidden' }}
+          >
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-3 text-lg">
                 <Phone className="h-5 w-5 text-primary" />
@@ -38,7 +48,13 @@ const CompanyContactCards = () => {
           </Card>
           
           {/* Back */}
-          <Card className="absolute inset-0 backface-hidden rotate-y-180 border-primary/30 bg-card">
+          <Card 
+            className="absolute inset-0 border-primary/30 bg-card"
+            style={{ 
+              backfaceVisibility: 'hidden',
+              transform: 'rotateY(180deg)'
+            }}
+          >
             <CardContent className="h-full flex flex-col items-center justify-center gap-3 p-6">
               <Button 
                 asChild
@@ -80,12 +96,22 @@ const CompanyContactCards = () => {
 
       {/* Email Card */}
       <div 
-        className="relative h-[200px] cursor-pointer perspective-1000"
+        className="relative h-[200px] cursor-pointer"
+        style={{ perspective: '1000px' }}
         onClick={() => toggleFlip('email')}
       >
-        <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flipped.email ? 'rotate-y-180' : ''}`}>
+        <div 
+          className="relative w-full h-full transition-transform duration-500"
+          style={{ 
+            transformStyle: 'preserve-3d',
+            transform: flipped.email ? 'rotateY(180deg)' : 'rotateY(0deg)'
+          }}
+        >
           {/* Front */}
-          <Card className="absolute inset-0 backface-hidden border-accent/30 hover:border-accent/60 transition-all duration-300 hover:shadow-lg">
+          <Card 
+            className="absolute inset-0 border-accent/30 hover:border-accent/60 transition-colors"
+            style={{ backfaceVisibility: 'hidden' }}
+          >
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-3 text-lg">
                 <Mail className="h-5 w-5 text-accent" />
@@ -99,7 +125,13 @@ const CompanyContactCards = () => {
           </Card>
           
           {/* Back */}
-          <Card className="absolute inset-0 backface-hidden rotate-y-180 border-accent/30 bg-card">
+          <Card 
+            className="absolute inset-0 border-accent/30 bg-card"
+            style={{ 
+              backfaceVisibility: 'hidden',
+              transform: 'rotateY(180deg)'
+            }}
+          >
             <CardContent className="h-full flex flex-col items-center justify-center gap-4 p-6">
               <Mail className="h-12 w-12 text-accent" />
               <Button 
@@ -120,12 +152,22 @@ const CompanyContactCards = () => {
 
       {/* Working Hours Card */}
       <div 
-        className="relative h-[200px] cursor-pointer perspective-1000"
+        className="relative h-[200px] cursor-pointer"
+        style={{ perspective: '1000px' }}
         onClick={() => toggleFlip('hours')}
       >
-        <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flipped.hours ? 'rotate-y-180' : ''}`}>
+        <div 
+          className="relative w-full h-full transition-transform duration-500"
+          style={{ 
+            transformStyle: 'preserve-3d',
+            transform: flipped.hours ? 'rotateY(180deg)' : 'rotateY(0deg)'
+          }}
+        >
           {/* Front */}
-          <Card className="absolute inset-0 backface-hidden border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-lg">
+          <Card 
+            className="absolute inset-0 border-primary/30 hover:border-primary/60 transition-colors"
+            style={{ backfaceVisibility: 'hidden' }}
+          >
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-3 text-lg">
                 <Clock className="h-5 w-5 text-primary" />
@@ -139,10 +181,16 @@ const CompanyContactCards = () => {
           </Card>
           
           {/* Back */}
-          <Card className="absolute inset-0 backface-hidden rotate-y-180 border-primary/30 bg-card">
+          <Card 
+            className="absolute inset-0 border-primary/30 bg-card"
+            style={{ 
+              backfaceVisibility: 'hidden',
+              transform: 'rotateY(180deg)'
+            }}
+          >
             <CardContent className="h-full flex flex-col justify-center p-6 space-y-3">
               <div className="flex justify-between items-center">
-                <span className="font-semibold">Понедельник - Пятница:</span>
+                <span className="font-semibold">Пн-Пт:</span>
                 <span className="text-primary">09:00 - 19:00</span>
               </div>
               <div className="flex justify-between items-center">
@@ -151,7 +199,7 @@ const CompanyContactCards = () => {
               </div>
               <div className="flex justify-between items-center">
                 <span className="font-semibold">Воскресенье:</span>
-                <span className="text-muted-foreground">Выходной день</span>
+                <span className="text-muted-foreground">Выходной</span>
               </div>
             </CardContent>
           </Card>
@@ -160,12 +208,22 @@ const CompanyContactCards = () => {
 
       {/* Address Card */}
       <div 
-        className="relative h-[200px] cursor-pointer perspective-1000"
+        className="relative h-[200px] cursor-pointer"
+        style={{ perspective: '1000px' }}
         onClick={() => toggleFlip('address')}
       >
-        <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flipped.address ? 'rotate-y-180' : ''}`}>
+        <div 
+          className="relative w-full h-full transition-transform duration-500"
+          style={{ 
+            transformStyle: 'preserve-3d',
+            transform: flipped.address ? 'rotateY(180deg)' : 'rotateY(0deg)'
+          }}
+        >
           {/* Front */}
-          <Card className="absolute inset-0 backface-hidden border-accent/30 hover:border-accent/60 transition-all duration-300 hover:shadow-lg">
+          <Card 
+            className="absolute inset-0 border-accent/30 hover:border-accent/60 transition-colors"
+            style={{ backfaceVisibility: 'hidden' }}
+          >
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-3 text-lg">
                 <MapPin className="h-5 w-5 text-accent" />
@@ -179,7 +237,13 @@ const CompanyContactCards = () => {
           </Card>
           
           {/* Back */}
-          <Card className="absolute inset-0 backface-hidden rotate-y-180 border-accent/30 bg-card">
+          <Card 
+            className="absolute inset-0 border-accent/30 bg-card"
+            style={{ 
+              backfaceVisibility: 'hidden',
+              transform: 'rotateY(180deg)'
+            }}
+          >
             <CardContent className="h-full flex flex-col items-center justify-center gap-4 p-6">
               <MapPin className="h-12 w-12 text-accent" />
               <p className="text-center font-semibold">г. Кемерово, Космическая улица, 16а к1</p>
