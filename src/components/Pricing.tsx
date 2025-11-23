@@ -90,9 +90,13 @@ const Pricing = () => {
           </p>
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="outline" className="mt-4 gap-2">
-                <Info className="h-4 w-4" />
-                Важная информация о госпошлине
+              <Button 
+                variant="default" 
+                size="lg"
+                className="mt-6 gap-2 bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-accent-foreground shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse border-2 border-accent-foreground/20"
+              >
+                <Info className="h-5 w-5" />
+                <span className="font-semibold">Обязательная госпошлина 500₽ – узнать подробнее</span>
               </Button>
             </DialogTrigger>
             <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
