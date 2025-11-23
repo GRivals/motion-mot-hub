@@ -1,44 +1,209 @@
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle, Navigation } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const CompanyContactCards = () => {
+  const [flipped, setFlipped] = useState<{ [key: string]: boolean }>({
+    phone: false,
+    email: false,
+    hours: false,
+    address: false,
+  });
+
+  const toggleFlip = (card: string) => {
+    setFlipped(prev => ({ ...prev, [card]: !prev[card] }));
+  };
+
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-8">
-      <Card className="border-accent/30 hover:border-accent/60 transition-all duration-300 hover:shadow-lg animate-slide-in-left group">
-        <CardHeader className="pb-4">
-          <CardTitle className="flex items-center gap-3 text-lg group-hover:text-accent transition-colors">
-            <MapPin className="h-5 w-5 text-accent" />
-            Фактический адрес
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          <p className="text-lg font-bold">Кемерово, Космическая улица, 16а к1</p>
-          <p className="text-muted-foreground">Южный м-н, Заводский район</p>
-        </CardContent>
-      </Card>
+      {/* Phone Card */}
+      <div 
+        className="relative h-[200px] cursor-pointer perspective-1000"
+        onClick={() => toggleFlip('phone')}
+      >
+        <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flipped.phone ? 'rotate-y-180' : ''}`}>
+          {/* Front */}
+          <Card className="absolute inset-0 backface-hidden border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-lg">
+            <CardHeader className="pb-4">
+              <CardTitle className="flex items-center gap-3 text-lg">
+                <Phone className="h-5 w-5 text-primary" />
+                Телефон
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <p className="text-2xl font-bold">8-950-599-2222</p>
+              <p className="text-sm text-muted-foreground">Нажмите для связи</p>
+            </CardContent>
+          </Card>
+          
+          {/* Back */}
+          <Card className="absolute inset-0 backface-hidden rotate-y-180 border-primary/30 bg-card">
+            <CardContent className="h-full flex flex-col items-center justify-center gap-3 p-6">
+              <Button 
+                asChild
+                variant="default"
+                className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <a href="https://wa.me/89505992222" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <MessageCircle className="h-4 w-4" />
+                  WhatsApp
+                </a>
+              </Button>
+              <Button 
+                asChild
+                variant="default"
+                className="w-full bg-[#0088cc] hover:bg-[#006699] text-white"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <a href="https://t.me/89505992222" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <MessageCircle className="h-4 w-4" />
+                  Telegram
+                </a>
+              </Button>
+              <Button 
+                asChild
+                variant="default"
+                className="w-full"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <a href="tel:89505992222" className="flex items-center gap-2">
+                  <Phone className="h-4 w-4" />
+                  Позвонить
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
 
-      <Card className="border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-lg animate-slide-in-right group">
-        <CardHeader className="pb-4">
-          <CardTitle className="flex items-center gap-3 text-lg group-hover:text-primary transition-colors">
-            <Phone className="h-5 w-5 text-primary" />
-            Контактная информация
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          <div className="flex items-center gap-2">
-            <Phone className="h-4 w-4 text-muted-foreground" />
-            <a href="tel:89505992222" className="font-semibold hover:text-primary transition-colors text-lg">
-              8-950-599-2222
-            </a>
-          </div>
-          <div className="flex items-center gap-2">
-            <Mail className="h-4 w-4 text-muted-foreground" />
-            <a href="mailto:adekt42avtotex@mail.ru" className="font-semibold hover:text-primary transition-colors">
-              adekt42avtotex@mail.ru
-            </a>
-          </div>
-        </CardContent>
-      </Card>
+      {/* Email Card */}
+      <div 
+        className="relative h-[200px] cursor-pointer perspective-1000"
+        onClick={() => toggleFlip('email')}
+      >
+        <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flipped.email ? 'rotate-y-180' : ''}`}>
+          {/* Front */}
+          <Card className="absolute inset-0 backface-hidden border-accent/30 hover:border-accent/60 transition-all duration-300 hover:shadow-lg">
+            <CardHeader className="pb-4">
+              <CardTitle className="flex items-center gap-3 text-lg">
+                <Mail className="h-5 w-5 text-accent" />
+                Email
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <p className="text-lg font-bold break-all">adekt42avtotex@mail.ru</p>
+              <p className="text-sm text-muted-foreground">Нажмите для отправки письма</p>
+            </CardContent>
+          </Card>
+          
+          {/* Back */}
+          <Card className="absolute inset-0 backface-hidden rotate-y-180 border-accent/30 bg-card">
+            <CardContent className="h-full flex flex-col items-center justify-center gap-4 p-6">
+              <Mail className="h-12 w-12 text-accent" />
+              <Button 
+                asChild
+                variant="default"
+                className="w-full"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <a href="mailto:adekt42avtotex@mail.ru" className="flex items-center gap-2">
+                  <Mail className="h-4 w-4" />
+                  Отправить письмо
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      {/* Working Hours Card */}
+      <div 
+        className="relative h-[200px] cursor-pointer perspective-1000"
+        onClick={() => toggleFlip('hours')}
+      >
+        <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flipped.hours ? 'rotate-y-180' : ''}`}>
+          {/* Front */}
+          <Card className="absolute inset-0 backface-hidden border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-lg">
+            <CardHeader className="pb-4">
+              <CardTitle className="flex items-center gap-3 text-lg">
+                <Clock className="h-5 w-5 text-primary" />
+                Режим работы
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              <p className="text-lg font-semibold">Пн-Пт: 09:00 - 19:00</p>
+              <p className="text-sm text-muted-foreground">Нажмите для подробностей</p>
+            </CardContent>
+          </Card>
+          
+          {/* Back */}
+          <Card className="absolute inset-0 backface-hidden rotate-y-180 border-primary/30 bg-card">
+            <CardContent className="h-full flex flex-col justify-center p-6 space-y-3">
+              <div className="flex justify-between items-center">
+                <span className="font-semibold">Понедельник - Пятница:</span>
+                <span className="text-primary">09:00 - 19:00</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="font-semibold">Суббота:</span>
+                <span className="text-primary">09:00 - 18:00</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="font-semibold">Воскресенье:</span>
+                <span className="text-muted-foreground">Выходной день</span>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      {/* Address Card */}
+      <div 
+        className="relative h-[200px] cursor-pointer perspective-1000"
+        onClick={() => toggleFlip('address')}
+      >
+        <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flipped.address ? 'rotate-y-180' : ''}`}>
+          {/* Front */}
+          <Card className="absolute inset-0 backface-hidden border-accent/30 hover:border-accent/60 transition-all duration-300 hover:shadow-lg">
+            <CardHeader className="pb-4">
+              <CardTitle className="flex items-center gap-3 text-lg">
+                <MapPin className="h-5 w-5 text-accent" />
+                Адрес станции
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <p className="text-lg font-bold">Кемерово, Космическая улица, 16а к1</p>
+              <p className="text-sm text-muted-foreground">Нажмите для маршрута</p>
+            </CardContent>
+          </Card>
+          
+          {/* Back */}
+          <Card className="absolute inset-0 backface-hidden rotate-y-180 border-accent/30 bg-card">
+            <CardContent className="h-full flex flex-col items-center justify-center gap-4 p-6">
+              <MapPin className="h-12 w-12 text-accent" />
+              <p className="text-center font-semibold">г. Кемерово, Космическая улица, 16а к1</p>
+              <p className="text-sm text-muted-foreground text-center">Южный м-н, Заводский район</p>
+              <Button 
+                asChild
+                variant="default"
+                className="w-full"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <a 
+                  href="https://yandex.ru/maps/?rtext=~55.304108,86.135046" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Navigation className="h-4 w-4" />
+                  Построить маршрут
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
     </div>
   );
 };
