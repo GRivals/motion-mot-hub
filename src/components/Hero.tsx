@@ -34,17 +34,17 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
-          <div className="mb-8 animate-fade-in">
-            <img src={logo} alt="АДЕКТ АВТО" className="h-32 md:h-40 w-auto mb-8" />
+          <div className="mb-6 sm:mb-8 animate-fade-in">
+            <img src={logo} alt="АДЕКТ АВТО" className="h-28 sm:h-32 md:h-40 w-auto mb-6 sm:mb-8" />
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Техосмотр <span className="text-primary">быстро</span> и{" "}
             <span className="text-accent">надежно</span>
           </h1>
 
           <p
-            className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in"
+            className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
             Профессиональная диагностика автомобиля за 30 минут. Аккредитованная
@@ -52,12 +52,12 @@ const Hero = () => {
           </p>
 
           <div
-            className="flex flex-col sm:flex-row gap-4 animate-fade-in"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
-            <Button onClick={scrollToContacts} variant="hero" size="lg" className="group">
+            <Button onClick={scrollToContacts} variant="hero" size="lg" className="group w-full sm:w-auto text-sm sm:text-base">
               Записаться на ТО
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
             </Button>
 
             <Button
@@ -66,6 +66,7 @@ const Hero = () => {
               }
               variant="hero-outline"
               size="lg"
+              className="w-full sm:w-auto text-sm sm:text-base"
             >
               Как это работает
             </Button>

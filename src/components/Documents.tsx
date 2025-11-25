@@ -44,9 +44,9 @@ const Documents = () => {
   return (
     <section id="documents" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Документы и регламенты</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4">Документы и регламенты</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Вся необходимая документация для прохождения техосмотра
           </p>
         </div>
@@ -84,10 +84,10 @@ const Documents = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center animate-fade-in">
-          <Card className="border-accent/50 bg-accent/5 inline-block">
-            <CardContent className="p-6">
-              <p className="text-sm text-muted-foreground max-w-2xl">
+        <div className="mt-8 sm:mt-12 text-center animate-fade-in">
+          <Card className="border-accent/50 bg-accent/5 inline-block max-w-full">
+            <CardContent className="p-4 sm:p-6">
+              <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl px-2">
                 Все документы представлены в соответствии с действующим законодательством РФ. 
                 При возникновении вопросов обращайтесь к нашим специалистам.
               </p>

@@ -36,9 +36,9 @@ const ContactForm = () => {
   return (
     <section id="contacts" className="py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Записаться на техосмотр</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4">Записаться на техосмотр</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Оставьте заявку, и мы свяжемся с вами для уточнения деталей
           </p>
         </div>
@@ -85,7 +85,7 @@ const ContactForm = () => {
                       rows={4}
                     />
                   </div>
-                  <Button type="submit" variant="hero" size="lg" className="w-full group">
+                  <Button type="submit" variant="hero" size="lg" className="w-full group text-sm sm:text-base">
                     Отправить заявку
                     <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>

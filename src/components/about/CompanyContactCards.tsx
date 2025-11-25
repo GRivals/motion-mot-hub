@@ -16,10 +16,10 @@ const CompanyContactCards = () => {
   };
 
   return (
-    <div className="grid md:grid-cols-2 gap-6 mb-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8">
       {/* Phone Card */}
       <div 
-        className="relative h-[200px] cursor-pointer"
+        className="relative h-[180px] sm:h-[200px] cursor-pointer"
         style={{ perspective: '1000px' }}
         onClick={() => toggleFlip('phone')}
       >
@@ -42,8 +42,8 @@ const CompanyContactCards = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <p className="text-2xl font-bold">8-950-599-2222</p>
-              <p className="text-sm text-muted-foreground">Нажмите для связи</p>
+              <p className="text-xl sm:text-2xl font-bold">8-950-599-2222</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Нажмите для связи</p>
             </CardContent>
           </Card>
           
@@ -55,37 +55,37 @@ const CompanyContactCards = () => {
               transform: 'rotateY(180deg)'
             }}
           >
-            <CardContent className="h-full flex flex-col items-center justify-center gap-3 p-6">
+            <CardContent className="h-full flex flex-col items-center justify-center gap-2 sm:gap-3 p-4 sm:p-6">
               <Button 
                 asChild
                 variant="default"
-                className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white"
+                className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white text-xs sm:text-sm h-9 sm:h-10"
                 onClick={(e) => e.stopPropagation()}
               >
                 <a href="https://wa.me/89505992222" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <MessageCircle className="h-4 w-4" />
+                  <MessageCircle className="h-3 w-3 sm:h-4 sm:w-4" />
                   WhatsApp
                 </a>
               </Button>
               <Button 
                 asChild
                 variant="default"
-                className="w-full bg-[#0088cc] hover:bg-[#006699] text-white"
+                className="w-full bg-[#0088cc] hover:bg-[#006699] text-white text-xs sm:text-sm h-9 sm:h-10"
                 onClick={(e) => e.stopPropagation()}
               >
                 <a href="https://t.me/89505992222" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <MessageCircle className="h-4 w-4" />
+                  <MessageCircle className="h-3 w-3 sm:h-4 sm:w-4" />
                   Telegram
                 </a>
               </Button>
               <Button 
                 asChild
                 variant="default"
-                className="w-full"
+                className="w-full text-xs sm:text-sm h-9 sm:h-10"
                 onClick={(e) => e.stopPropagation()}
               >
                 <a href="tel:89505992222" className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-3 w-3 sm:h-4 sm:w-4" />
                   Позвонить
                 </a>
               </Button>
@@ -96,7 +96,7 @@ const CompanyContactCards = () => {
 
       {/* Email Card */}
       <div 
-        className="relative h-[200px] cursor-pointer"
+        className="relative h-[180px] sm:h-[200px] cursor-pointer"
         style={{ perspective: '1000px' }}
         onClick={() => toggleFlip('email')}
       >
@@ -119,8 +119,8 @@ const CompanyContactCards = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <p className="text-lg font-bold break-all">adekt42avtotex@mail.ru</p>
-              <p className="text-sm text-muted-foreground">Нажмите для отправки письма</p>
+              <p className="text-base sm:text-lg font-bold break-all">adekt42avtotex@mail.ru</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Нажмите для отправки письма</p>
             </CardContent>
           </Card>
           
@@ -132,16 +132,16 @@ const CompanyContactCards = () => {
               transform: 'rotateY(180deg)'
             }}
           >
-            <CardContent className="h-full flex flex-col items-center justify-center gap-4 p-6">
-              <Mail className="h-12 w-12 text-accent" />
+            <CardContent className="h-full flex flex-col items-center justify-center gap-4 p-4 sm:p-6">
+              <Mail className="h-10 w-10 sm:h-12 sm:w-12 text-accent" />
               <Button 
                 asChild
                 variant="default"
-                className="w-full"
+                className="w-full text-xs sm:text-sm h-9 sm:h-10"
                 onClick={(e) => e.stopPropagation()}
               >
                 <a href="mailto:adekt42avtotex@mail.ru" className="flex items-center gap-2">
-                  <Mail className="h-4 w-4" />
+                  <Mail className="h-3 w-3 sm:h-4 sm:w-4" />
                   Отправить письмо
                 </a>
               </Button>
@@ -152,7 +152,7 @@ const CompanyContactCards = () => {
 
       {/* Working Hours Card */}
       <div 
-        className="relative h-[200px] cursor-pointer"
+        className="relative h-[180px] sm:h-[200px] cursor-pointer"
         style={{ perspective: '1000px' }}
         onClick={() => toggleFlip('hours')}
       >
@@ -175,8 +175,8 @@ const CompanyContactCards = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
-              <p className="text-lg font-semibold">Пн-Пт: 09:00 - 19:00</p>
-              <p className="text-sm text-muted-foreground">Нажмите для подробностей</p>
+              <p className="text-base sm:text-lg font-semibold">Пн-Пт: 09:00 - 19:00</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Нажмите для подробностей</p>
             </CardContent>
           </Card>
           
@@ -188,16 +188,16 @@ const CompanyContactCards = () => {
               transform: 'rotateY(180deg)'
             }}
           >
-            <CardContent className="h-full flex flex-col justify-center p-6 space-y-3">
-              <div className="flex justify-between items-center">
+            <CardContent className="h-full flex flex-col justify-center p-4 sm:p-6 space-y-2 sm:space-y-3">
+              <div className="flex justify-between items-center text-sm sm:text-base">
                 <span className="font-semibold">Пн-Пт:</span>
                 <span className="text-primary">09:00 - 19:00</span>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center text-sm sm:text-base">
                 <span className="font-semibold">Суббота:</span>
                 <span className="text-primary">09:00 - 18:00</span>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center text-sm sm:text-base">
                 <span className="font-semibold">Воскресенье:</span>
                 <span className="text-muted-foreground">Выходной</span>
               </div>
@@ -208,7 +208,7 @@ const CompanyContactCards = () => {
 
       {/* Address Card */}
       <div 
-        className="relative h-[200px] cursor-pointer"
+        className="relative h-[180px] sm:h-[200px] cursor-pointer"
         style={{ perspective: '1000px' }}
         onClick={() => toggleFlip('address')}
       >
@@ -231,8 +231,8 @@ const CompanyContactCards = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <p className="text-lg font-bold">Кемерово, Космическая улица, 16а к1</p>
-              <p className="text-sm text-muted-foreground">Нажмите для маршрута</p>
+              <p className="text-base sm:text-lg font-bold">Кемерово, Космическая улица, 16а к1</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Нажмите для маршрута</p>
             </CardContent>
           </Card>
           
@@ -244,14 +244,14 @@ const CompanyContactCards = () => {
               transform: 'rotateY(180deg)'
             }}
           >
-            <CardContent className="h-full flex flex-col items-center justify-center gap-4 p-6">
-              <MapPin className="h-12 w-12 text-accent" />
-              <p className="text-center font-semibold">г. Кемерово, Космическая улица, 16а к1</p>
-              <p className="text-sm text-muted-foreground text-center">Южный м-н, Заводский район</p>
+            <CardContent className="h-full flex flex-col items-center justify-center gap-3 sm:gap-4 p-4 sm:p-6">
+              <MapPin className="h-10 w-10 sm:h-12 sm:w-12 text-accent" />
+              <p className="text-center font-semibold text-sm sm:text-base">г. Кемерово, Космическая улица, 16а к1</p>
+              <p className="text-xs sm:text-sm text-muted-foreground text-center">Южный м-н, Заводский район</p>
               <Button 
                 asChild
                 variant="default"
-                className="w-full"
+                className="w-full text-xs sm:text-sm h-9 sm:h-10"
                 onClick={(e) => e.stopPropagation()}
               >
                 <a 
@@ -260,7 +260,7 @@ const CompanyContactCards = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
                 >
-                  <Navigation className="h-4 w-4" />
+                  <Navigation className="h-3 w-3 sm:h-4 sm:w-4" />
                   Построить маршрут
                 </a>
               </Button>
