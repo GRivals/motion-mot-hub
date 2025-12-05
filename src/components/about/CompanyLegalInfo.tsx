@@ -33,6 +33,7 @@ const CompanyLegalInfo = () => {
               <Button
                 variant="link"
                 className="h-auto p-0 text-accent font-semibold text-sm"
+                onClick={() => window.open("/files/attest.PDF", "_blank")}
               >
                 Посмотреть →
               </Button>
