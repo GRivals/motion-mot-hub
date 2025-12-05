@@ -60,7 +60,7 @@ const CompanyLegalInfo = () => {
             <FileText className="h-5 w-5 text-primary shrink-0 mt-1" />
             <div>
               <div className="text-xs text-muted-foreground mb-1">ОГРН</div>
-              <div className="font-semibold">1254200013308</div>
+              <div className="font-semibold">1234200006149</div>
             </div>
           </div>
 
