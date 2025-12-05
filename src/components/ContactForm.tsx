@@ -17,18 +17,20 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Форматирование сообщения для WhatsApp
     const message = `Новая заявка на ТО:\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nEmail: ${formData.email}\nКомментарий: ${formData.comment}`;
-    const whatsappUrl = `https://wa.me/79505992222?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/79505992222?text=${encodeURIComponent(
+      message
+    )}`;
     // Открываем WhatsApp
     window.open(whatsappUrl, "_blank");
-    
+
     toast({
       title: "Заявка отправлена!",
       description: "Мы свяжемся с вами в ближайшее время.",
     });
-    
+
     // Очистка формы
     setFormData({ name: "", phone: "", email: "", comment: "" });
   };
@@ -37,7 +39,9 @@ const ContactForm = () => {
     <section id="contacts" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4">Записаться на техосмотр</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4">
+            Записаться на техосмотр
+          </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Оставьте заявку, и мы свяжемся с вами для уточнения деталей
           </p>
@@ -55,7 +59,9 @@ const ContactForm = () => {
                     <Input
                       placeholder="Ваше имя"
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                       required
                     />
                   </div>
@@ -64,7 +70,9 @@ const ContactForm = () => {
                       type="tel"
                       placeholder="Телефон"
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, phone: e.target.value })
+                      }
                       required
                     />
                   </div>
@@ -73,7 +81,9 @@ const ContactForm = () => {
                       type="email"
                       placeholder="Email"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                       required
                     />
                   </div>
@@ -81,11 +91,18 @@ const ContactForm = () => {
                     <Textarea
                       placeholder="Комментарий (необязательно)"
                       value={formData.comment}
-                      onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, comment: e.target.value })
+                      }
                       rows={4}
                     />
                   </div>
-                  <Button type="submit" variant="hero" size="lg" className="w-full group text-sm sm:text-base">
+                  <Button
+                    type="submit"
+                    variant="hero"
+                    size="lg"
+                    className="w-full group text-sm sm:text-base"
+                  >
                     Отправить заявку
                     <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
@@ -102,8 +119,11 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Телефон</h3>
-                  <a href="tel:+79505992222" className="text-muted-foreground hover:text-primary transition-colors block">
-                    8-950-599-2222
+                  <a
+                    href="tel:+79505992222"
+                    className="text-muted-foreground hover:text-primary transition-colors block"
+                  >
+                    8-951-585-22-22
                   </a>
                 </div>
               </CardContent>
@@ -116,7 +136,10 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Email</h3>
-                  <a href="mailto:adekt42avtotex@mail.ru" className="text-muted-foreground hover:text-accent transition-colors">
+                  <a
+                    href="mailto:adekt42avtotex@mail.ru"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                  >
                     adekt42avtotex@mail.ru
                   </a>
                 </div>
@@ -144,8 +167,12 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Адрес станции</h3>
-                  <p className="text-muted-foreground">г. Кемерово, Космическая улица, 16а к1</p>
-                  <p className="text-muted-foreground text-sm">Южный м-н, Заводский район</p>
+                  <p className="text-muted-foreground">
+                    г. Кемерово, Космическая улица, 16а к1
+                  </p>
+                  <p className="text-muted-foreground text-sm">
+                    Южный м-н, Заводский район
+                  </p>
                 </div>
               </CardContent>
             </Card>
