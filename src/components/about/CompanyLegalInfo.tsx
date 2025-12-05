@@ -44,7 +44,7 @@ const CompanyLegalInfo = () => {
             <FileText className="h-5 w-5 text-primary shrink-0 mt-1" />
             <div>
               <div className="text-xs text-muted-foreground mb-1">ИНН</div>
-              <div className="font-semibold">4205414144</div>
+              <div className="font-semibold">4205432104</div>
             </div>
           </div>
 
@@ -52,7 +52,7 @@ const CompanyLegalInfo = () => {
             <FileText className="h-5 w-5 text-primary shrink-0 mt-1" />
             <div>
               <div className="text-xs text-muted-foreground mb-1">КПП</div>
-              <div className="font-semibold">4205432104</div>
+              <div className="font-semibold">420501001</div>
             </div>
           </div>
 
