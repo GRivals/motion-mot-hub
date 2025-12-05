@@ -8,7 +8,7 @@ const CompanyLegalInfo = () => {
       <CardHeader className="bg-gradient-to-r from-primary/10 to-accent/10">
         <CardTitle className="flex items-center gap-3 text-xl md:text-2xl">
           <Building2 className="h-6 w-6 text-primary" />
-          Общество с ограниченной ответственностью "АДЕКТ АВТО"
+          ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АДЕКТ АВТО ТЕХ"
         </CardTitle>
       </CardHeader>
       <CardContent className="pt-6">
@@ -16,7 +16,9 @@ const CompanyLegalInfo = () => {
           <div className="flex items-start gap-3 p-4 rounded-lg bg-card hover:shadow-md transition-all duration-300 border border-border/50 hover:border-primary/50">
             <FileText className="h-5 w-5 text-primary shrink-0 mt-1" />
             <div>
-              <div className="text-xs text-muted-foreground mb-1">Номер ОТО</div>
+              <div className="text-xs text-muted-foreground mb-1">
+                Номер ОТО
+              </div>
               <div className="font-bold text-lg text-primary">14823</div>
             </div>
           </div>
@@ -24,8 +26,13 @@ const CompanyLegalInfo = () => {
           <div className="flex items-start gap-3 p-4 rounded-lg bg-card hover:shadow-md transition-all duration-300 border border-border/50 hover:border-accent/50">
             <Award className="h-5 w-5 text-accent shrink-0 mt-1" />
             <div className="w-full">
-              <div className="text-xs text-muted-foreground mb-2">Аттестат аккредитации</div>
-              <Button variant="link" className="h-auto p-0 text-accent font-semibold text-sm">
+              <div className="text-xs text-muted-foreground mb-2">
+                Аттестат аккредитации
+              </div>
+              <Button
+                variant="link"
+                className="h-auto p-0 text-accent font-semibold text-sm"
+              >
                 Посмотреть →
               </Button>
             </div>
@@ -58,8 +65,13 @@ const CompanyLegalInfo = () => {
           <div className="flex items-start gap-3 p-4 rounded-lg bg-card hover:shadow-md transition-all duration-300 border border-border/50 hover:border-primary/50 md:col-span-2 lg:col-span-3">
             <Building className="h-5 w-5 text-primary shrink-0 mt-1" />
             <div>
-              <div className="text-xs text-muted-foreground mb-1">Юридический адрес</div>
-              <div className="font-medium text-sm">650511, Россия, Кемеровская область - Кузбасс, Кемеровский М.О., Березово с., Весенняя ул., д. 50</div>
+              <div className="text-xs text-muted-foreground mb-1">
+                Юридический адрес
+              </div>
+              <div className="font-medium text-sm">
+                650511, Россия, Кемеровская область - Кузбасс, Кемеровский М.О.,
+                Березово с., Весенняя ул., д. 50
+              </div>
             </div>
           </div>
         </div>
