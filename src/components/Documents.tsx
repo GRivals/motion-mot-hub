@@ -21,7 +21,7 @@ const documents = [
   {
     title: "ФЗ-170 о техосмотре",
     description: "Федеральный закон о техническом осмотре ТС",
-    file: "/files/fz170.pdf",
+    file: "/files/n170fz.pdf",
   },
   {
     title: "Постановление №1434 от 15.09.2020",
