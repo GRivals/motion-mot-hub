@@ -13,7 +13,7 @@ const CompanyLegalInfo = () => {
       </CardHeader>
       <CardContent className="pt-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="flex items-start gap-3 p-4 rounded-lg bg-card hover:shadow-md transition-all duration-300 border border-border/50 hover:border-primary/50">
+          <div className="flex items-start gap-3 p-4 rounded-lg bg-card hidden">
             <FileText className="h-5 w-5 text-primary shrink-0 mt-1" />
             <div>
               <div className="text-xs text-muted-foreground mb-1">
@@ -58,7 +58,7 @@ const CompanyLegalInfo = () => {
             <FileText className="h-5 w-5 text-primary shrink-0 mt-1" />
             <div>
               <div className="text-xs text-muted-foreground mb-1">ОГРН</div>
-              <div className="font-semibold">1234200006149</div>
+              <div className="font-semibold">1254200013308</div>
             </div>
           </div>
 
