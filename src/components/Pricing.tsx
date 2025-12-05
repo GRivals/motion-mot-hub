@@ -161,9 +161,16 @@ const Pricing = () => {
 
                   <div className="mt-6">
                     <h3 className="font-semibold text-lg mb-2">
-                      Реквизиты для уплаты
+                      <a
+                        href="/files/recvision.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline transition-all px-2 py-1 border border-primary/50 rounded-md bg-primary/5 hover:bg-primary/10"
+                      >
+                        Реквизиты для уплаты
+                      </a>
                     </h3>
-                    <p>
+                    <p className="mt-2 text-sm text-foreground">
                       Реквизиты для уплаты государственной пошлины за внесение
                       сведений в ЕАИСТО при оформлении диагностической карты по
                       результатам технического осмотра транспортных средств на
