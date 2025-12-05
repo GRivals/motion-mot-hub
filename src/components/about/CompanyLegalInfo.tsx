@@ -14,10 +14,8 @@ const CompanyLegalInfo = () => {
       <CardContent className="pt-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="flex items-start gap-3 p-4 rounded-lg bg-card hidden">
-            <FileText className="h-5 w-5 text-primary shrink-0 mt-1" /> ##чтобы
-            вернуть ОТО поменяй эту строку на "
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-card hover:shadow-md transition-all duration-300 border border-border/50 hover:border-primary/50 md:col-span-2 lg:col-span-3"></div>
-            "
+            <FileText className="h-5 w-5 text-primary shrink-0 mt-1" />{" "}
+            {/*чтобы вернуть ОТО поменяй эту строку на "<div className="flex items-start gap-3 p-4 rounded-lg bg-card hover:shadow-md transition-all duration-300 border border-border/50 hover:border-primary/50 md:col-span-2 lg:col-span-3"></div>*/}
             <div>
               <div className="text-xs text-muted-foreground mb-1">
                 Номер ОТО
