@@ -11,7 +11,7 @@ const documents = [
   {
     title: "Порядок проведения осмотра",
     description: "Регламент проведения технического осмотра",
-    file: "/files/poryadok.pdf",
+    file: "/files/2021.06.01_pp-1434.pdf",
   },
   {
     title: "Договор на ТО (образец)",
