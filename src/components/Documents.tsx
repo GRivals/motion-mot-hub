@@ -6,7 +6,7 @@ const documents = [
   {
     title: "Аттестат аккредитации",
     description: "Официальный документ аккредитации станции ТО",
-    file: "/files/attest.PDF",
+    file: "/files/attest().PDF",
   },
   {
     title: "Порядок проведения осмотра",
