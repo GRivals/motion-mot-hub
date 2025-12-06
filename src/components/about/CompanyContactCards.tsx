@@ -262,7 +262,7 @@ const CompanyContactCards = () => {
             </CardHeader>
             <CardContent className="space-y-3">
               <p className="text-base sm:text-lg font-bold">
-                Кемерово, Космическая улица, 16а к1
+                Кемерово, Космическая улица, 16а
               </p>
               <p className="text-xs sm:text-sm text-muted-foreground">
                 Нажмите для маршрута
@@ -281,7 +281,7 @@ const CompanyContactCards = () => {
             <CardContent className="h-full flex flex-col items-center justify-center gap-3 sm:gap-4 p-4 sm:p-6">
               <MapPin className="h-10 w-10 sm:h-12 sm:w-12 text-accent" />
               <p className="text-center font-semibold text-sm sm:text-base">
-                г. Кемерово, Космическая улица, 16а к1
+                г. Кемерово, Космическая улица, 16а
               </p>
               <p className="text-xs sm:text-sm text-muted-foreground text-center">
                 Южный м-н, Заводский район

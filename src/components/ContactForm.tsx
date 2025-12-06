@@ -168,7 +168,7 @@ const ContactForm = () => {
                 <div>
                   <h3 className="font-semibold mb-2">Адрес станции</h3>
                   <p className="text-muted-foreground">
-                    г. Кемерово, Космическая улица, 16а к1
+                    г. Кемерово, Космическая улица, 16а
                   </p>
                   <p className="text-muted-foreground text-sm">
                     Южный м-н, Заводский район
