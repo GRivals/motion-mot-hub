@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Clock, MessageCircle, Navigation } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  MessageCircle,
+  Navigation,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CompanyContactCards = () => {
@@ -12,28 +19,28 @@ const CompanyContactCards = () => {
   });
 
   const toggleFlip = (card: string) => {
-    setFlipped(prev => ({ ...prev, [card]: !prev[card] }));
+    setFlipped((prev) => ({ ...prev, [card]: !prev[card] }));
   };
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8">
       {/* Phone Card */}
-      <div 
+      <div
         className="relative h-[180px] sm:h-[200px] cursor-pointer"
-        style={{ perspective: '1000px' }}
-        onClick={() => toggleFlip('phone')}
+        style={{ perspective: "1000px" }}
+        onClick={() => toggleFlip("phone")}
       >
-        <div 
+        <div
           className="relative w-full h-full transition-transform duration-500"
-          style={{ 
-            transformStyle: 'preserve-3d',
-            transform: flipped.phone ? 'rotateY(180deg)' : 'rotateY(0deg)'
+          style={{
+            transformStyle: "preserve-3d",
+            transform: flipped.phone ? "rotateY(180deg)" : "rotateY(0deg)",
           }}
         >
           {/* Front */}
-          <Card 
+          <Card
             className="absolute inset-0 border-primary/30 hover:border-primary/60 transition-colors"
-            style={{ backfaceVisibility: 'hidden' }}
+            style={{ backfaceVisibility: "hidden" }}
           >
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-3 text-lg">
@@ -43,42 +50,54 @@ const CompanyContactCards = () => {
             </CardHeader>
             <CardContent className="space-y-3">
               <p className="text-xl sm:text-2xl font-bold">8-950-599-2222</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Нажмите для связи</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                Нажмите для связи
+              </p>
             </CardContent>
           </Card>
-          
+
           {/* Back */}
-          <Card 
+          <Card
             className="absolute inset-0 border-primary/30 bg-card"
-            style={{ 
-              backfaceVisibility: 'hidden',
-              transform: 'rotateY(180deg)'
+            style={{
+              backfaceVisibility: "hidden",
+              transform: "rotateY(180deg)",
             }}
           >
             <CardContent className="h-full flex flex-col items-center justify-center gap-2 sm:gap-3 p-4 sm:p-6">
-              <Button 
+              <Button
                 asChild
                 variant="default"
                 className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white text-xs sm:text-sm h-9 sm:h-10"
                 onClick={(e) => e.stopPropagation()}
               >
-                <a href="https://wa.me/89505992222" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a
+                  href="https://wa.me/89505992222"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
                   <MessageCircle className="h-3 w-3 sm:h-4 sm:w-4" />
                   WhatsApp
                 </a>
               </Button>
-              <Button 
+              <Button
                 asChild
                 variant="default"
                 className="w-full bg-[#0088cc] hover:bg-[#006699] text-white text-xs sm:text-sm h-9 sm:h-10"
                 onClick={(e) => e.stopPropagation()}
               >
-                <a href="https://t.me/89505992222" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a
+                  href="https://t.me/89505992222"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
                   <MessageCircle className="h-3 w-3 sm:h-4 sm:w-4" />
                   Telegram
                 </a>
               </Button>
-              <Button 
+              <Button
                 asChild
                 variant="default"
                 className="w-full text-xs sm:text-sm h-9 sm:h-10"
@@ -95,22 +114,22 @@ const CompanyContactCards = () => {
       </div>
 
       {/* Email Card */}
-      <div 
+      <div
         className="relative h-[180px] sm:h-[200px] cursor-pointer"
-        style={{ perspective: '1000px' }}
-        onClick={() => toggleFlip('email')}
+        style={{ perspective: "1000px" }}
+        onClick={() => toggleFlip("email")}
       >
-        <div 
+        <div
           className="relative w-full h-full transition-transform duration-500"
-          style={{ 
-            transformStyle: 'preserve-3d',
-            transform: flipped.email ? 'rotateY(180deg)' : 'rotateY(0deg)'
+          style={{
+            transformStyle: "preserve-3d",
+            transform: flipped.email ? "rotateY(180deg)" : "rotateY(0deg)",
           }}
         >
           {/* Front */}
-          <Card 
+          <Card
             className="absolute inset-0 border-accent/30 hover:border-accent/60 transition-colors"
-            style={{ backfaceVisibility: 'hidden' }}
+            style={{ backfaceVisibility: "hidden" }}
           >
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-3 text-lg">
@@ -119,28 +138,35 @@ const CompanyContactCards = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <p className="text-base sm:text-lg font-bold break-all">adekt42avtotex@mail.ru</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Нажмите для отправки письма</p>
+              <p className="text-base sm:text-lg font-bold break-all">
+                adekt42avtotex@mail.ru
+              </p>
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                Нажмите для отправки письма
+              </p>
             </CardContent>
           </Card>
-          
+
           {/* Back */}
-          <Card 
+          <Card
             className="absolute inset-0 border-accent/30 bg-card"
-            style={{ 
-              backfaceVisibility: 'hidden',
-              transform: 'rotateY(180deg)'
+            style={{
+              backfaceVisibility: "hidden",
+              transform: "rotateY(180deg)",
             }}
           >
             <CardContent className="h-full flex flex-col items-center justify-center gap-4 p-4 sm:p-6">
               <Mail className="h-10 w-10 sm:h-12 sm:w-12 text-accent" />
-              <Button 
+              <Button
                 asChild
                 variant="default"
                 className="w-full text-xs sm:text-sm h-9 sm:h-10"
                 onClick={(e) => e.stopPropagation()}
               >
-                <a href="mailto:adekt42avtotex@mail.ru" className="flex items-center gap-2">
+                <a
+                  href="mailto:adekt42avtotex@mail.ru"
+                  className="flex items-center gap-2"
+                >
                   <Mail className="h-3 w-3 sm:h-4 sm:w-4" />
                   Отправить письмо
                 </a>
@@ -151,22 +177,22 @@ const CompanyContactCards = () => {
       </div>
 
       {/* Working Hours Card */}
-      <div 
+      <div
         className="relative h-[180px] sm:h-[200px] cursor-pointer"
-        style={{ perspective: '1000px' }}
-        onClick={() => toggleFlip('hours')}
+        style={{ perspective: "1000px" }}
+        onClick={() => toggleFlip("hours")}
       >
-        <div 
+        <div
           className="relative w-full h-full transition-transform duration-500"
-          style={{ 
-            transformStyle: 'preserve-3d',
-            transform: flipped.hours ? 'rotateY(180deg)' : 'rotateY(0deg)'
+          style={{
+            transformStyle: "preserve-3d",
+            transform: flipped.hours ? "rotateY(180deg)" : "rotateY(0deg)",
           }}
         >
           {/* Front */}
-          <Card 
+          <Card
             className="absolute inset-0 border-primary/30 hover:border-primary/60 transition-colors"
-            style={{ backfaceVisibility: 'hidden' }}
+            style={{ backfaceVisibility: "hidden" }}
           >
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-3 text-lg">
@@ -175,17 +201,21 @@ const CompanyContactCards = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
-              <p className="text-base sm:text-lg font-semibold">Пн-Пт: 09:00 - 19:00</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Нажмите для подробностей</p>
+              <p className="text-base sm:text-lg font-semibold">
+                Пн-Пт: 09:00 - 19:00
+              </p>
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                Нажмите для подробностей
+              </p>
             </CardContent>
           </Card>
-          
+
           {/* Back */}
-          <Card 
+          <Card
             className="absolute inset-0 border-primary/30 bg-card"
-            style={{ 
-              backfaceVisibility: 'hidden',
-              transform: 'rotateY(180deg)'
+            style={{
+              backfaceVisibility: "hidden",
+              transform: "rotateY(180deg)",
             }}
           >
             <CardContent className="h-full flex flex-col justify-center p-4 sm:p-6 space-y-2 sm:space-y-3">
@@ -207,22 +237,22 @@ const CompanyContactCards = () => {
       </div>
 
       {/* Address Card */}
-      <div 
+      <div
         className="relative h-[180px] sm:h-[200px] cursor-pointer"
-        style={{ perspective: '1000px' }}
-        onClick={() => toggleFlip('address')}
+        style={{ perspective: "1000px" }}
+        onClick={() => toggleFlip("address")}
       >
-        <div 
+        <div
           className="relative w-full h-full transition-transform duration-500"
-          style={{ 
-            transformStyle: 'preserve-3d',
-            transform: flipped.address ? 'rotateY(180deg)' : 'rotateY(0deg)'
+          style={{
+            transformStyle: "preserve-3d",
+            transform: flipped.address ? "rotateY(180deg)" : "rotateY(0deg)",
           }}
         >
           {/* Front */}
-          <Card 
+          <Card
             className="absolute inset-0 border-accent/30 hover:border-accent/60 transition-colors"
-            style={{ backfaceVisibility: 'hidden' }}
+            style={{ backfaceVisibility: "hidden" }}
           >
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-3 text-lg">
@@ -231,32 +261,40 @@ const CompanyContactCards = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <p className="text-base sm:text-lg font-bold">Кемерово, Космическая улица, 16а к1</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Нажмите для маршрута</p>
+              <p className="text-base sm:text-lg font-bold">
+                Кемерово, Космическая улица, 16а к1
+              </p>
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                Нажмите для маршрута
+              </p>
             </CardContent>
           </Card>
-          
+
           {/* Back */}
-          <Card 
+          <Card
             className="absolute inset-0 border-accent/30 bg-card"
-            style={{ 
-              backfaceVisibility: 'hidden',
-              transform: 'rotateY(180deg)'
+            style={{
+              backfaceVisibility: "hidden",
+              transform: "rotateY(180deg)",
             }}
           >
             <CardContent className="h-full flex flex-col items-center justify-center gap-3 sm:gap-4 p-4 sm:p-6">
               <MapPin className="h-10 w-10 sm:h-12 sm:w-12 text-accent" />
-              <p className="text-center font-semibold text-sm sm:text-base">г. Кемерово, Космическая улица, 16а к1</p>
-              <p className="text-xs sm:text-sm text-muted-foreground text-center">Южный м-н, Заводский район</p>
-              <Button 
+              <p className="text-center font-semibold text-sm sm:text-base">
+                г. Кемерово, Космическая улица, 16а к1
+              </p>
+              <p className="text-xs sm:text-sm text-muted-foreground text-center">
+                Южный м-н, Заводский район
+              </p>
+              <Button
                 asChild
                 variant="default"
                 className="w-full text-xs sm:text-sm h-9 sm:h-10"
                 onClick={(e) => e.stopPropagation()}
               >
-                <a 
-                  href="https://yandex.ru/maps/?rtext=~55.304108,86.135046" 
-                  target="_blank" 
+                <a
+                  href="https://yandex.ru/maps/?rtext=~55.318581, 86.091864"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
                 >
