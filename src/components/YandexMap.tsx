@@ -21,7 +21,7 @@ const YandexMap = () => {
           // Координаты: г. Кемерово, Космическая 16а
           // @ts-ignore
           const map = new window.ymaps.Map(mapRef.current, {
-            center: [55.329826, 86.089531], // Координаты Кемерово, Космическая 16а
+            center: [55.318581, 86.091864], // Координаты Кемерово, Космическая 16а
             zoom: 16,
             controls: ["zoomControl", "fullscreenControl"],
           });
@@ -29,10 +29,11 @@ const YandexMap = () => {
           // Добавляем метку
           // @ts-ignore
           const placemark = new window.ymaps.Placemark(
-            [55.329826, 86.089531],
+            [55.318581, 86.091864],
             {
               balloonContentHeader: "АДЕКТ АВТО",
-              balloonContentBody: "<strong>Адрес:</strong> г. Кемерово, Космическая улица, 16а к1<br><strong>Телефон:</strong> 8-950-599-2222<br><strong>Режим работы:</strong><br>Пн-Пт: 09:00 - 19:00<br>Сб: 09:00 - 18:00<br>Вс: Выходной день",
+              balloonContentBody:
+                "<strong>Адрес:</strong> г. Кемерово, Космическая улица, 16а к1<br><strong>Телефон:</strong> 8-950-599-2222<br><strong>Режим работы:</strong><br>Пн-Пт: 09:00 - 19:00<br>Сб: 09:00 - 18:00<br>Вс: Выходной день",
               balloonContentFooter: "Заводский район, Южный м-н",
               hintContent: "Станция технического осмотра",
             },
@@ -78,7 +79,9 @@ const YandexMap = () => {
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <Card className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group animate-fade-in">
             <div className="p-6 text-center">
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🚗</div>
+              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
+                🚗
+              </div>
               <h3 className="font-semibold mb-2">Удобный подъезд</h3>
               <p className="text-sm text-muted-foreground">
                 Легко добраться на автомобиле с любой части города
@@ -86,9 +89,14 @@ const YandexMap = () => {
             </div>
           </Card>
 
-          <Card className="border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg group animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <Card
+            className="border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg group animate-fade-in"
+            style={{ animationDelay: "0.1s" }}
+          >
             <div className="p-6 text-center">
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🅿️</div>
+              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
+                🅿️
+              </div>
               <h3 className="font-semibold mb-2">Бесплатная парковка</h3>
               <p className="text-sm text-muted-foreground">
                 Просторная парковка для всех клиентов
@@ -96,9 +104,14 @@ const YandexMap = () => {
             </div>
           </Card>
 
-          <Card className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <Card
+            className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
             <div className="p-6 text-center">
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">⏱️</div>
+              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
+                ⏱️
+              </div>
               <h3 className="font-semibold mb-2">Без очередей</h3>
               <p className="text-sm text-muted-foreground">
                 Предварительная запись по телефону

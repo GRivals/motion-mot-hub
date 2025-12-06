@@ -323,33 +323,6 @@ const Pricing = () => {
             );
           })}
         </div>
-
-        <Card className="border-accent/50 bg-accent/5 animate-fade-in">
-          <CardContent className="p-4 sm:p-6">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-              <div className="w-full md:w-auto">
-                <h3 className="text-lg sm:text-xl font-semibold mb-2">
-                  Дополнительные услуги
-                </h3>
-                <p className="text-sm sm:text-base text-muted-foreground">
-                  Повторный осмотр (в течение 20 дней) —{" "}
-                  <span className="font-semibold whitespace-nowrap">300 ₽</span>
-                  <br />
-                  Государственная пошлина за внесение изменений —{" "}
-                  <span className="font-semibold whitespace-nowrap">500 ₽</span>
-                </p>
-              </div>
-              <div className="shrink-0 text-left md:text-right w-full md:w-auto">
-                <div className="text-xs sm:text-sm text-muted-foreground mb-1">
-                  Оплата
-                </div>
-                <div className="text-sm sm:text-base font-semibold">
-                  Наличные / Карта
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );
